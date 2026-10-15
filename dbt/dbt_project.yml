@@ -1,0 +1,8 @@
+name: delivery_transformations
+version: '1.0'
+config-version: 2
+profile: delivery
+model-paths: [models]
+models:
+  delivery_transformations:
+    +materialized: table

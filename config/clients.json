@@ -1,0 +1,15 @@
+[
+  {
+    "id": "s3_001",
+    "type": "s3",
+    "bucket": "example-client-001",
+    "source_partition": "CLIENT_ID=s3_001/"
+  },
+  {
+    "id": "sf_001",
+    "type": "snowflake",
+    "account_env": "CLIENT_SF_001",
+    "stage": "DELIVERY_STAGE",
+    "table": "EVENTS"
+  }
+]

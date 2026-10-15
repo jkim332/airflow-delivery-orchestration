@@ -1,0 +1,18 @@
+workload:
+  total_gb: 500
+  s3_clients: 50
+  azure_clients: 10
+  gcs_clients: 10
+  snowflake_clients: 50
+sla:
+  weekday: Monday
+  hour: 9
+  timezone: fixed_EST_UTC_minus_05
+  review_buffer_minutes: 60
+mapping:
+  target_partitions_per_batch: 32
+  max_batches_per_client: 128
+  max_total_mapped_tasks: 1024
+pools:
+  object_delivery: 8
+  snowflake_delivery: 4

@@ -1,0 +1,14 @@
+version: 2
+sources:
+  - name: raw
+    database: "{{ env_var('RAW_DATABASE', 'RAW') }}"
+    schema: INGEST
+    tables:
+      - name: events
+models:
+  - name: client_events
+    columns:
+      - name: event_id
+        tests: [not_null, unique]
+      - name: client_id
+        tests: [not_null]
